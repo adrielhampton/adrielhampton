@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Non-Obvious Ways the Covid-19 Pandemic Changes Campaigning — Adriel Hampton</title>
+  <meta name="description" content="Three interesting things that could happen — and in bits and pieces are happening — as a result of having an election during an unprecedented global public health crisis.">
+  <meta property="og:title" content="Three Non-Obvious Ways the Covid-19 Pandemic Changes Campaigning">
+  <meta property="og:description" content="Three interesting things that could happen — and in bits and pieces are happening — as a result of having an election during an unprecedented global public health crisis.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://adrielhampton.com/blog/three-non-obvious-ways-the-covid-19-pandemic-changes-campaigning.html">
+  <meta property="article:author" content="Adriel Hampton">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold:          #ECB770;
+      --gold-dark:     #A8692E;
+      --teal:          #36D6C3;
+      --teal-dark:     #24B0A0;
+      --grey:          #B7A99A;
+      --pleather:      #504538;
+      --pleather-dark: #2E2720;
+      --white:         #FFFFFF;
+      --off-white:     #FAF8F5;
+      --warm-rule:     #EDE8E2;
+      --body-text:     #5A4D42;
+      --font-head:     'Hanuman', Georgia, serif;
+      --font-body:     'Rubik', system-ui, sans-serif;
+      --max:           1180px;
+      --prose:         700px;
+      --gutter:        clamp(20px, 5vw, 52px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--body-text); background: var(--white); -webkit-font-smoothing: antialiased; }
+    a { color: var(--teal-dark); text-decoration: none; border-bottom: 1px solid currentColor; transition: color 0.18s; }
+    a:hover { color: var(--gold-dark); }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 4px solid var(--gold); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; flex-shrink: 0; border: none; }
+    .nav-ahg { font-family: var(--font-head); font-weight: 700; font-size: 1.65rem; color: var(--pleather); }
+    .nav-full-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pleather); border: none; transition: color 0.18s; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .nav-cta { background: var(--pleather) !important; color: var(--gold) !important; padding: 10px 22px; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--pleather) !important; }
+
+    /* POST HERO */
+    .post-hero {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--warm-rule);
+      padding: clamp(52px,7vw,80px) var(--gutter) clamp(44px,6vw,64px);
+      position: relative;
+    }
+    .post-hero::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 7px; height: 100%; background: var(--gold);
+    }
+    .post-hero-inner { max-width: var(--prose); margin: 0 auto; position: relative; z-index: 1; }
+    .post-meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .post-cat {
+      background: var(--gold); color: var(--pleather);
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      padding: 5px 12px; border: none;
+    }
+    .post-cat:hover { background: var(--pleather); color: var(--gold); border: none; }
+    .post-date {
+      font-size: 0.72rem; font-weight: 400; letter-spacing: 0.08em;
+      color: var(--grey); text-transform: uppercase;
+    }
+    .post-reading-time {
+      font-size: 0.72rem; color: var(--grey); letter-spacing: 0.04em;
+    }
+    .post-title {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(1.9rem, 3.5vw, 3rem);
+      color: var(--pleather); line-height: 1.08;
+      letter-spacing: -0.01em; margin-bottom: 20px;
+    }
+    .post-desc {
+      font-size: 1.05rem; color: #6B5D52; line-height: 1.72;
+    }
+
+    /* POST BODY */
+    .post-body-wrap {
+      padding: clamp(52px,7vw,80px) var(--gutter);
+      background: var(--white);
+    }
+    .post-body {
+      max-width: var(--prose); margin: 0 auto;
+    }
+
+    /* PROSE */
+    .post-body p {
+      font-size: 1rem; line-height: 1.85;
+      color: var(--body-text); margin-bottom: 22px;
+    }
+    .post-body h2 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 1.6rem; color: var(--pleather);
+      line-height: 1.15; margin: 44px 0 16px;
+    }
+    .post-body h3 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 1.25rem; color: var(--pleather);
+      line-height: 1.2; margin: 36px 0 12px;
+    }
+    .post-body h4 {
+      font-family: var(--font-body); font-weight: 600;
+      font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--pleather); margin: 32px 0 10px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 22px 24px;
+    }
+    .post-body ul { list-style: disc; }
+    .post-body ol { list-style: decimal; }
+    .post-body li {
+      font-size: 1rem; line-height: 1.78; color: var(--body-text); margin-bottom: 8px;
+    }
+    .post-body blockquote {
+      border-left: 4px solid var(--gold);
+      padding: 16px 0 16px 28px;
+      margin: 28px 0;
+    }
+    .post-body blockquote p {
+      font-size: 1.05rem; font-style: italic; color: var(--pleather);
+      margin-bottom: 0;
+    }
+    .post-body strong { font-weight: 600; color: var(--pleather); }
+    .post-body em { font-style: italic; }
+    .post-body hr {
+      border: none; border-top: 2px solid var(--warm-rule);
+      margin: 40px 0;
+    }
+    .post-body .post-img {
+      width: 100%; margin: 32px 0;
+      display: block;
+    }
+    .post-body .img-caption {
+      font-size: 0.78rem; font-style: italic; color: var(--grey);
+      margin-top: -20px; margin-bottom: 32px;
+      padding-top: 10px; border-top: 1px solid var(--warm-rule);
+    }
+    .post-body .centered { text-align: center; }
+
+    /* BACK + AUTHOR FOOTER */
+    .post-footer {
+      background: var(--off-white);
+      border-top: 1px solid var(--warm-rule);
+      padding: clamp(44px,5vw,64px) var(--gutter);
+    }
+    .post-footer-inner {
+      max-width: var(--prose); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+    }
+    .post-author-block {}
+    .post-author-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--grey); margin-bottom: 8px; display: block;
+    }
+    .post-author-name {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 1.2rem; color: var(--pleather);
+    }
+    .post-author-bio {
+      font-size: 0.85rem; color: var(--body-text); line-height: 1.65; margin-top: 6px;
+    }
+    .post-footer-cta {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 12px 24px; background: var(--pleather); color: var(--gold);
+      border: 2px solid var(--pleather); border-bottom: 2px solid var(--pleather);
+      white-space: nowrap; transition: background 0.18s, color 0.18s;
+    }
+    .post-footer-cta:hover { background: var(--gold); color: var(--pleather); border-color: var(--gold); }
+
+    /* SITE FOOTER */
+    .footer { background: var(--pleather-dark); padding: 36px var(--gutter); border-top: 4px solid var(--gold); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-brand { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; color: var(--gold); border: none; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); border: none; transition: color 0.18s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: rgba(183,169,154,0.5); letter-spacing: 0.04em; width: 100%; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+    @media (max-width: 640px) {
+      .nav-full-name { display: none; }
+      .nav-links .hide-mobile { display: none; }
+      .post-footer-inner { grid-template-columns: 1fr; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-ahg">AHG</span>
+        <span class="nav-full-name">The Adriel Hampton Group</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#services" class="hide-mobile">Services</a></li>
+        <li><a href="/#about" class="hide-mobile">About</a></li>
+        <li><a href="/blog/" class="hide-mobile">Blog</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <a href="/blog/" class="post-cat">Campaigns</a>
+        <span class="post-date">April 30, 2020</span>
+        <span class="post-reading-time">5 min read</span>
+      </div>
+      <h1 class="post-title">Three Non-Obvious Ways the Covid-19 Pandemic Changes Campaigning</h1>
+      <p class="post-desc">Three interesting things that could happen — and in bits and pieces are happening — as a result of having an election during an unprecedented global public health crisis.</p>
+    </div>
+  </header>
+
+  <div class="post-body-wrap">
+    <article class="post-body">
+      Remember, oh, a year ago, what we thought the 2020 election cycle would be like? There'd be unprecedented ground energy for the presidential candidates' campaigns. There'd be intense downballot races and efforts to flip the U.S. Senate and, following the Virginia results, efforts to flip state legislatures. In local races, we'd be knocking on lots of doors, and in national races, we'd be hosting large events.
+
+Now that every state is under at least advisory orders, that physical human contact itself is a hazard and will remain a huge risk zone for at least the next few months, there's no "ground game" in the conventional sense. We aren't knocking on doors. Sensible candidates won't host events for a while and if either party tries to hold an on-site convention, this will be seen as an aberration at best and a deadly foolish move at worst—even, I would guess, in late summer (although Tom Perez has said the Democrats want to do it!). We've already seen legitimate questions asked about some states' decisions to have on-site voting primaries, and what candidates in those primaries should say to voters about them.
+
+A <a href="https://www.nytimes.com/2020/04/05/us/politics/congress-campaigns-coronavirus.html" target="_blank" rel="noopener"><i>New York Times </i>headline calls</a> the current state of politics "remote mode" and points out that it has especially affected the battle for U.S. Congress and, to an extent, Senate races. They contrast "remote" to "retail," as I've seen other stories do. "Retail" campaigning involves face-to-face interaction, while "remote" reaches people in their homes via technology. But the NYT's use of the terms feels clumsy. "Retail" sounds like commerce, and "remote" sounds like we all live further away from each other. I don't think the pandemic puts good candidates further away from their voters
+
+Instead, I think three interesting things could happen, and in bits and pieces are happening, as a result of having an election during an unprecedented global public health crisis.
+
+<strong>1. Good candidates are finding interconnectivity in their communities.</strong> We’ve seen candidates in our districts do public health forums instead of stump speeches, be part of networks of public information sharers instead of slingers of mud. Local candidates, especially, must become crisis managers, counsellors, advisers, and organizers. It's no longer enough to have traditional expertise, or traditional credibility. There are a lot of <a href="https://www.theatlantic.com/politics/archive/2020/03/coronavirus-campaign/608713/" target="_blank" rel="noopener">stories</a> about candidates not explicitly asking for votes, and <a href="https://southphillyreview.com/2020/04/07/as-the-pandemic-continues-political-campaigns-are-adapting/" target="_blank" rel="noopener">replacing promotional material</a> with public service announcements. Candidates don't want to appear (or be) "selfish." And so, at least alongside and sometimes instead of asking voters or constituents for support, they are "asking them about groceries, picking up prescriptions and responding with mutual aid resources,” in the words of one campaign manager.
+
+It's too early and too chaotic to guess the electoral effects of this change in campaigns. Interestingly, even if candidates were not inclined to shift to communitarian altruism as a central campaign message, they are motivated to do so if other candidates go in that direction. The cost of not being able to "hear the room" while your opponent turns into a paladin is probably much higher than the votes you might lose by appearing cooperative instead of competitive.
+
+<strong>2. Doubling down on tech—and a new kind of tech.</strong> It's predictable that candidates are learning how to use conferencing platforms and of course texting voters and having a robust messaging schedule was one reason Bernie Sanders did well in his earlier primaries. But we’re thinking about what Wisconsin political consultant Joe Zepecki <a href="https://www.newyorker.com/news/campaign-chronicles/digital-door-knocking-voter-outreach-in-a-pandemic" target="_blank" rel="noopener">says in a recent <i>New Yorker</i> piece</a>: he says voters don't live at home, but rather live on their mobile devices. Zepecki reasons from this fact, which has been turned somewhat inside out by Covid-19 but still holds true, that digital organizing should continue at all possible entry points into a voter's phone, including "e-mail, texts, Twitter, Facebook, Words with Friends, etc."
+
+The work we do to ensure that campaigns have the most accurate data from vendors like our client email and cell phone data provider Accurate Append becomes that much more important.
+
+In fact, before the campaign season became pandemic season and everyone cancelled their events and went home, new kinds of technology were taking shape via the "deep canvassing" movement that now have the potential to connect change #1 above, the campaigner-as-community-advocate, and change #2, this deep turn into technology.
+
+<a href="https://prospect.org/politics/change-voters-sympathies-deep-canvassing/" target="_blank" rel="noopener">Deep canvassing</a> is the phrase used to describe "developing a nonjudgmental, empathetic connection with a voter through 10 to 15 minutes of authentic conversation." Deep canvassing <a href="https://www.vox.com/2020/1/29/21065620/broockman-kalla-deep-canvassing" target="_blank" rel="noopener">is even being touted</a> as a way to "talk people out of bigotry."
+
+Deep canvassing is a merging of technology and care. The technology component can even be something like checking a voter's registration status online during the conversation, if they want to know it. <a href="https://prospect.org/politics/change-voters-sympathies-deep-canvassing/" target="_blank" rel="noopener">One canvasser talks</a> of helping an older woman reach a state of "elation when I looked up her registration and showed her she was still registered." But other programs and platforms allow interactive information-sharing, reminders to do follow-up conversations, and more. Imagine the potential of this style of canvassing as people feel trapped and isolated at home. It's soberingly appropriate.
+
+<strong>3. Candidates will be able to campaign on more systemic issues.</strong> Nobody wants to be an accelerationist about this, but desperate times do call for desperately creative, desperately radical measures. Suddenly, opposition to universal health care <i>not tied to a job</i> seems to make complete sense to almost everyone. The media and mainstream politicians have learned that precarity is unacceptable. Although some conservative candidates and elected officials are irresponsibly calling for the "re-opening" of public life, moderates and leftists are in favor of greater degrees of aid, debt forgiveness, and housing and health guarantees.
+
+<a href="https://www.newsday.com/opinion/coronavirus/pandemic-coronavirus-covid-19-universal-basic-income-ubi-1.43776695" target="_blank" rel="noopener">Mainstream sources</a> are treating universal basic income as a legitimate policy option, and more progressive groups are outright demanding it. Spain went ahead and implemented it, which will increase perceptions of its policy legitimacy. Congressional Progressive Caucus Co-Chair Rep. <a href="https://peoplesworld.org/article/progressive-lawmakers-push-people-first-in-coronavirus-relief/" target="_blank" rel="noopener">Pramilla Jayapal</a> of Washington recently called mass unemployment "a policy choice," and pointed to European countries as having policies in place to either keep people working in safe conditions or keep paying people if they are let go. Jaypal's own proposal includes "payments of salaries of up to $100,000, plus guaranteed retention of health insurance."
+
+Expect elections to continue to spur attempts at deeper communication, deeper technology, and deeper policymaking if we have more of them during pandemics. And, expect us to take many of these new developments back through the looking glass for use in whatever semblance of back-to-normal campaigning we do in the future.
+    </article>
+  </div>
+
+  <div class="post-footer">
+    <div class="post-footer-inner">
+      <div class="post-author-block">
+        <span class="post-author-label">Written by</span>
+        <div class="post-author-name">Adriel Hampton</div>
+        <p class="post-author-bio">
+          Founder, The Adriel Hampton Group. Digital acquisition strategist,
+          2025 Reed Award winner, Chickasaw Nation citizen.
+        </p>
+      </div>
+      <a href="/#contact" class="post-footer-cta">Work With AHG →</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="footer-brand">AHG</a>
+      <ul class="footer-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 The Adriel Hampton Group · Carlsbad, CA · Citizen of the Chickasaw Nation</p>
+    </div>
+  </footer>
+
+</body>
+</html>

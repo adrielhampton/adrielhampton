@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow privacy policy from indexing
+Disallow: /privacy.html
+
+Sitemap: https://adrielhampton.com/sitemap.xml

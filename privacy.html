@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — The Adriel Hampton Group</title>
+  <meta name="description" content="Privacy policy for adrielhampton.com and The Adriel Hampton Group.">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #ECB770; --gold-dark: #A8692E; --teal-dark: #24B0A0;
+      --grey: #B7A99A; --pleather: #504538; --pleather-dark: #2E2720;
+      --white: #FFFFFF; --off-white: #FAF8F5; --warm-rule: #EDE8E2;
+      --body-text: #5A4D42;
+      --font-head: 'Hanuman', Georgia, serif;
+      --font-body: 'Rubik', system-ui, sans-serif;
+      --max: 1180px; --prose: 720px; --gutter: clamp(20px, 5vw, 52px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); color: var(--body-text); background: var(--white); -webkit-font-smoothing: antialiased; }
+    a { color: var(--teal-dark); text-decoration: none; border-bottom: 1px solid currentColor; transition: color 0.18s; }
+    a:hover { color: var(--gold-dark); }
+
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 4px solid var(--gold); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; border: none; }
+    .nav-ahg { font-family: var(--font-head); font-weight: 700; font-size: 1.65rem; color: var(--pleather); }
+    .nav-full-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pleather); border: none; transition: color 0.18s; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .nav-cta { background: var(--pleather) !important; color: var(--gold) !important; padding: 10px 22px; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--pleather) !important; }
+
+    .page-hero {
+      background: var(--off-white); border-bottom: 1px solid var(--warm-rule);
+      padding: clamp(48px,6vw,72px) var(--gutter);
+      position: relative;
+    }
+    .page-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 7px; height: 100%; background: var(--gold); }
+    .hero-inner { max-width: var(--prose); margin: 0 auto; }
+    .page-eyebrow { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 14px; }
+    .page-h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(2rem,3.5vw,3rem); color: var(--pleather); line-height: 1.08; margin-bottom: 12px; }
+    .page-sub { font-size: 0.9rem; color: var(--grey); }
+
+    .content-wrap { padding: clamp(52px,7vw,80px) var(--gutter); }
+    .content { max-width: var(--prose); margin: 0 auto; }
+
+    .content h2 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 1.3rem; color: var(--pleather);
+      margin: 40px 0 12px; line-height: 1.2;
+    }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 0.95rem; color: var(--body-text); line-height: 1.82; margin-bottom: 16px; }
+    .content p:last-child { margin-bottom: 0; }
+
+    .footer { background: var(--pleather-dark); padding: 36px var(--gutter); border-top: 4px solid var(--gold); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-brand { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; color: var(--gold); border: none; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); border: none; transition: color 0.18s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: rgba(183,169,154,0.5); width: 100%; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+    @media (max-width: 600px) { .nav-full-name { display: none; } .nav-links .hide-mobile { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-ahg">AHG</span>
+        <span class="nav-full-name">The Adriel Hampton Group</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#services" class="hide-mobile">Services</a></li>
+        <li><a href="/#about" class="hide-mobile">About</a></li>
+        <li><a href="/blog/" class="hide-mobile">Blog</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="hero-inner">
+      <span class="page-eyebrow">Legal</span>
+      <h1 class="page-h1">Privacy Policy</h1>
+      <p class="page-sub">Effective date: March 2019 · Last reviewed: March 2026</p>
+    </div>
+  </header>
+
+  <div class="content-wrap">
+    <div class="content">
+
+      <h2>1. Privacy Policy</h2>
+      <p>Welcome to adrielhampton.com, the website of The Adriel Hampton Group. The Adriel Hampton Group knows that you care how information about you is used and shared. This Privacy Policy explains what information of yours will be collected by The Adriel Hampton Group when you use our website and online services, how the information will be used, and how you can control the collection, correction and/or deletion of information. We will not use or share your information with anyone except as described in this Privacy Policy. This Privacy Policy does not apply to information we collect by other means (including offline) or from other sources.</p>
+
+      <h2>2. Information We Collect</h2>
+      <p>User-Provided Information: You provide us information about yourself, such as your name and email address, if you sign up using a form on our site. If you correspond with us by email, we may retain the content of your email messages, your email address and our responses.</p>
+
+      <h2>3. Third Party Services</h2>
+      <p>The Adriel Hampton Group uses Action Network, Meta (Facebook/Instagram), and other services in connection with our work. You can read more about those companies and their features on their respective websites. When you visit adrielhampton.com, services associated with our website may send one or more cookies — a small text file containing a string of alphanumeric characters — to your computer that uniquely identifies your browser. A cookie does not collect personal information about you. You can reset your web browser to refuse all cookies or to indicate when a cookie is being sent. However, some features of adrielhampton.com may not function properly if the ability to accept cookies is disabled.</p>
+
+      <h2>4. How We Use Your Information</h2>
+      <p>We use the personal information you submit to operate, maintain, and provide to you the features and functionality of adrielhampton.com. By providing The Adriel Hampton Group your email address, you consent to our using the email address to send you messages such as newsletters and service updates. If you do not want to receive such email messages, you may opt out using the links in the footer of such messages.</p>
+
+      <h2>5. How We Share Your Information</h2>
+      <p>The Adriel Hampton Group may share your personally identifiable information with third parties for the purpose of providing adrielhampton.com services to you. If we do this, such third parties' use of your information will be bound by this Privacy Policy. We may store personal information in locations outside the direct control of The Adriel Hampton Group (for instance, on servers or databases co-located with hosting providers).</p>
+      <p>Except as otherwise described in this Privacy Policy, The Adriel Hampton Group will not disclose personal information to any third party unless required to do so by law or subpoena or if we believe that such action is necessary to (a) conform to the law or comply with legal process; (b) enforce this policy, take precautions against liability, or investigate and defend ourselves against any third-party claims or allegations; or (c) exercise or protect the rights, property, or personal safety of The Adriel Hampton Group, our users or others.</p>
+
+      <h2>6. How We Protect Your Information</h2>
+      <p>The Adriel Hampton Group cares about the integrity and security of your personal information. This site is hosted on GitHub Pages and served over HTTPS. We cannot, however, ensure or warrant the security of any information you transmit to The Adriel Hampton Group or guarantee that your information on the service may not be accessed, disclosed, altered, or destroyed by breach of any of our physical, technical, or managerial safeguards. The Adriel Hampton Group is not responsible for the functionality or security measures of any third party.</p>
+
+      <h2>7. Compromise of Personal Information</h2>
+      <p>In the event that personal information is compromised as a result of a breach of security, The Adriel Hampton Group will promptly notify those persons whose personal information has been compromised, in accordance with the notification procedures set forth in this Privacy Policy, or as otherwise required by applicable law.</p>
+
+      <h2>8. Your Choices About Your Information</h2>
+      <p>You may decline to submit personally identifiable information through adrielhampton.com, in which case The Adriel Hampton Group may not be able to provide certain services to you. You can review and correct the information about you that The Adriel Hampton Group keeps on file by contacting us directly at <a href="mailto:adriel@adrielhampton.com">adriel@adrielhampton.com</a>.</p>
+
+      <h2>9. Children's Privacy</h2>
+      <p>The Adriel Hampton Group does not knowingly collect or solicit personal information from anyone under the age of 13. If you are under 13, please do not send any information about yourself to us. In the event that we learn that we have collected personal information from a child under age 13 without verification of parental consent, we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 13, please contact us at <a href="mailto:adriel@adrielhampton.com">adriel@adrielhampton.com</a>.</p>
+
+      <h2>10. Links to Other Web Sites</h2>
+      <p>We are not responsible for the practices employed by websites linked to or from adrielhampton.com, nor the information or content contained therein. When you use a link to go from adrielhampton.com to another website, our Privacy Policy is no longer in effect. Your browsing and interaction on any other website is subject to that website's own rules and policies.</p>
+
+      <h2>11. Changes to Our Privacy Policy</h2>
+      <p>If we change our privacy policies and procedures, we will post those changes on adrielhampton.com to keep you aware of what information we collect, how we use it, and under what circumstances we may disclose it. Changes to this Privacy Policy are effective when they are posted on this page. If you have any questions about this Privacy Policy or your dealings with this website, please contact us at <a href="mailto:adriel@adrielhampton.com">adriel@adrielhampton.com</a>.</p>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="footer-brand">AHG</a>
+      <ul class="footer-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 The Adriel Hampton Group · Carlsbad, CA · Citizen of the Chickasaw Nation</p>
+    </div>
+  </footer>
+
+</body>
+</html>

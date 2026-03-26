@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chickasaw Heritage — Adriel Hampton</title>
+  <meta name="description" content="Adriel Hampton is a citizen of the Chickasaw Nation. This page honors his family's Chickasaw heritage across generations — from Bo Hampton's California homestead to John G. Hampton's leadership at the MacKenzie Art Gallery to Sierra Hampton's food sovereignty research.">
+  <meta property="og:title" content="Chickasaw Heritage — Adriel Hampton">
+  <meta property="og:description" content="Adriel Hampton is a citizen of the Chickasaw Nation. Honoring the Hampton family's Chickasaw legacy across generations.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://adrielhampton.com/chickasaw">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold:          #ECB770;
+      --gold-dark:     #A8692E;
+      --teal:          #36D6C3;
+      --teal-dark:     #24B0A0;
+      --grey:          #B7A99A;
+      --pleather:      #504538;
+      --pleather-dark: #2E2720;
+      --white:         #FFFFFF;
+      --off-white:     #FAF8F5;
+      --warm-rule:     #EDE8E2;
+      --body-text:     #5A4D42;
+      --font-head:     'Hanuman', Georgia, serif;
+      --font-body:     'Rubik', system-ui, sans-serif;
+      --max:           1180px;
+      --prose:         680px;
+      --gutter:        clamp(20px, 5vw, 52px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--body-text); background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: var(--teal-dark); border-bottom: 1px solid currentColor; transition: color 0.18s; }
+    a:hover { color: var(--gold-dark); }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 4px solid var(--gold); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; flex-shrink: 0; text-decoration: none; border: none; }
+    .nav-brand:hover { border: none; }
+    .nav-ahg { font-family: var(--font-head); font-weight: 700; font-size: 1.65rem; color: var(--pleather); }
+    .nav-full-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pleather); border: none; transition: color 0.18s; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .nav-cta { background: var(--pleather) !important; color: var(--gold) !important; padding: 10px 22px; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--pleather) !important; }
+
+    /* HERO */
+    .hero {
+      background: var(--pleather-dark);
+      padding: clamp(72px, 10vw, 120px) var(--gutter) clamp(56px, 8vw, 88px);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 7px; height: 100%; background: var(--gold);
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(-55deg, transparent, transparent 60px, rgba(236,183,112,0.03) 60px, rgba(236,183,112,0.03) 61px);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 2; }
+
+    .hero-nation {
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-bottom: 32px;
+    }
+    .nation-mark {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nation-mark-inner {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--pleather-dark);
+    }
+    .nation-label {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold);
+    }
+
+    .hero-h1 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      color: var(--white); line-height: 1.0; letter-spacing: -0.02em;
+      margin-bottom: 24px; max-width: 800px;
+    }
+    .hero-h1 em { font-style: normal; color: var(--gold); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: rgba(255,255,255,0.6); line-height: 1.8;
+      max-width: 640px; margin-bottom: 0;
+    }
+
+    /* FAMILY NAMES BAND */
+    .names-band { background: var(--gold); padding: 20px var(--gutter); }
+    .names-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+    }
+    .names-label {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(80,69,56,0.55); flex-shrink: 0;
+    }
+    .names-list { display: flex; align-items: center; flex-wrap: wrap; }
+    .family-name {
+      font-family: var(--font-head); font-weight: 700; font-size: 1.15rem;
+      color: var(--pleather); padding: 2px 18px;
+      border-right: 2px solid rgba(80,69,56,0.2);
+    }
+    .family-name:last-child { border-right: none; }
+
+    /* INTRO */
+    .intro {
+      padding: clamp(64px, 8vw, 96px) var(--gutter);
+      background: var(--off-white);
+    }
+    .intro-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 560px; gap: 80px; align-items: start;
+    }
+    .intro-pull {
+      position: sticky; top: 84px;
+    }
+    .intro-pull-q {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--pleather); line-height: 1.1;
+    }
+    .intro-pull-q em { font-style: normal; color: var(--gold-dark); }
+    .intro-pull-rule {
+      width: 56px; height: 4px; background: var(--gold);
+      margin: 24px 0;
+    }
+    .intro-pull-note {
+      font-size: 0.82rem; color: var(--grey);
+      line-height: 1.7; letter-spacing: 0.02em;
+    }
+    .intro-body p {
+      font-size: 1rem; color: var(--body-text); line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    /* SECTION LAYOUT */
+    .section-rule {
+      border: none; border-top: 2px solid var(--warm-rule);
+      max-width: var(--max); margin: 0 auto;
+    }
+
+    .person-section {
+      padding: clamp(64px, 8vw, 96px) var(--gutter);
+    }
+    .person-section:nth-child(odd) { background: var(--white); }
+    .person-section:nth-child(even) { background: var(--off-white); }
+
+    .person-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; gap: 64px; align-items: start;
+    }
+    .person-inner.photo-left  { grid-template-columns: 400px 1fr; }
+    .person-inner.photo-right { grid-template-columns: 1fr 400px; }
+    .person-inner.photo-right .person-photo { order: 2; }
+    .person-inner.photo-right .person-content { order: 1; }
+
+    .person-photo { position: relative; }
+    .person-photo img {
+      width: 100%; display: block;
+      object-fit: cover;
+    }
+    .person-photo figcaption {
+      font-size: 0.75rem; font-style: italic;
+      color: var(--grey); line-height: 1.55;
+      margin-top: 12px; padding-top: 12px;
+      border-top: 1px solid var(--warm-rule);
+    }
+
+    /* Gold offset frame on photos */
+    .photo-framed {
+      position: relative;
+    }
+    .photo-framed::after {
+      content: ''; position: absolute;
+      top: 12px; right: -12px;
+      width: 100%; height: 100%;
+      border: 3px solid var(--gold);
+      z-index: -1; pointer-events: none;
+    }
+    .person-inner.photo-right .photo-framed::after {
+      right: auto; left: -12px;
+    }
+
+    .person-section-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--teal-dark);
+      margin-bottom: 12px; display: block;
+    }
+    .person-name {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      color: var(--pleather); line-height: 1.05;
+      margin-bottom: 8px;
+    }
+    .person-role {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--grey);
+      margin-bottom: 28px; line-height: 1.5;
+    }
+    .person-body p {
+      font-size: 0.98rem; color: var(--body-text);
+      line-height: 1.85; margin-bottom: 18px;
+    }
+    .person-body p:last-child { margin-bottom: 0; }
+
+    /* EXTRA PHOTOS — two-up or single within a section */
+    .photo-pair {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      padding: 0 var(--gutter) clamp(48px,6vw,72px);
+    }
+    .photo-single {
+      max-width: 540px; margin: 0 auto;
+      padding: 0 var(--gutter) clamp(48px,6vw,72px);
+    }
+    .photo-single figure, .photo-pair figure { }
+    .photo-single figcaption, .photo-pair figcaption {
+      font-size: 0.75rem; font-style: italic;
+      color: var(--grey); line-height: 1.55;
+      margin-top: 10px; padding-top: 10px;
+      border-top: 1px solid var(--warm-rule);
+    }
+
+    /* CLOSING SECTION */
+    .closing {
+      background: var(--pleather-dark);
+      padding: clamp(72px, 9vw, 108px) var(--gutter);
+      position: relative; overflow: hidden;
+    }
+    .closing::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 7px; height: 100%; background: var(--gold);
+    }
+    .closing-inner {
+      max-width: var(--prose); margin: 0 auto;
+      position: relative; z-index: 2;
+    }
+    .closing-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 20px; display: block;
+    }
+    .closing h2 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--white); line-height: 1.1; margin-bottom: 32px;
+    }
+    .closing p {
+      font-size: 1rem; color: rgba(255,255,255,0.72);
+      line-height: 1.85; margin-bottom: 18px;
+    }
+    .closing p a {
+      color: var(--gold); border-color: var(--gold);
+    }
+    .closing p a:hover { color: var(--white); border-color: var(--white); }
+    .closing-phrase {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 1.25rem; color: var(--gold);
+      margin-top: 36px; margin-bottom: 0 !important;
+      letter-spacing: 0.02em;
+    }
+
+    /* CODA */
+    .coda {
+      background: var(--off-white);
+      padding: 40px var(--gutter);
+      border-top: 1px solid var(--warm-rule);
+    }
+    .coda-inner {
+      max-width: var(--prose); margin: 0 auto;
+    }
+    .coda p {
+      font-size: 0.875rem; font-style: italic;
+      color: var(--grey); line-height: 1.75;
+    }
+    .coda p a { color: var(--teal-dark); border-color: var(--teal-dark); font-style: normal; }
+
+    /* FOOTER */
+    .footer { background: var(--pleather-dark); padding: 36px var(--gutter); border-top: 4px solid var(--gold); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-brand { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; color: var(--gold); border: none; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); border: none; transition: color 0.18s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: rgba(183,169,154,0.5); letter-spacing: 0.04em; width: 100%; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.in-view { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.22s; }
+
+    /* NOTE: Images below use live WordPress URLs.
+       Before going live on GitHub Pages, download all images to /images/
+       and update src attributes to relative paths. */
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .intro-inner { grid-template-columns: 1fr; gap: 40px; }
+      .intro-pull { position: static; }
+      .person-inner.photo-left,
+      .person-inner.photo-right { grid-template-columns: 1fr; }
+      .person-inner.photo-right .person-photo { order: 1; }
+      .person-inner.photo-right .person-content { order: 2; }
+      .person-photo { max-width: 440px; }
+      .photo-pair { grid-template-columns: 1fr; max-width: 440px; }
+      .photo-framed::after { display: none; }
+    }
+    @media (max-width: 600px) {
+      .nav-full-name { display: none; }
+      .nav-links .hide-mobile { display: none; }
+      .names-list { gap: 0; }
+      .family-name { font-size: 0.95rem; padding: 2px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-ahg">AHG</span>
+        <span class="nav-full-name">The Adriel Hampton Group</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#services" class="hide-mobile">Services</a></li>
+        <li><a href="/#about" class="hide-mobile">About</a></li>
+        <li><a href="/blog/" class="hide-mobile">Blog</a></li>
+        <li><a href="/#contact" class="nav-cta btn">Let's Talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-nation">
+        <div class="nation-mark"><div class="nation-mark-inner"></div></div>
+        <span class="nation-label">Chickasaw Nation Citizen</span>
+      </div>
+      <h1 class="hero-h1">
+        Chickasaw<br>
+        <em>Heritage</em>
+      </h1>
+      <p class="hero-sub">
+        I am a citizen of the Chickasaw Nation. So are my children, as are many amazing
+        siblings, cousins, and living ancestors throughout the U.S., Canada, and South America.
+        Each of these family members brings their unique gifts to the Chickasaw legacy.
+      </p>
+    </div>
+  </header>
+
+  <!-- FAMILY NAMES BAND -->
+  <div class="names-band" aria-label="Chickasaw family names">
+    <div class="names-inner">
+      <span class="names-label">Our family names</span>
+      <div class="names-list">
+        <span class="family-name">Factor</span>
+        <span class="family-name">Hawkins</span>
+        <span class="family-name">Corley</span>
+        <span class="family-name">Couchman</span>
+        <span class="family-name">Hampton</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-inner">
+      <div class="intro-pull reveal">
+        <p class="intro-pull-q">
+          Our family's roots in the Chickasaw Nation go deeper than <em>any government record.</em>
+        </p>
+        <div class="intro-pull-rule"></div>
+        <p class="intro-pull-note">
+          Factor, Hawkins, Corley, Couchman, and Hampton — these are our Chickasaw family names,
+          woven through generations of records, allotment, and migrations.
+        </p>
+      </div>
+      <div class="intro-body reveal reveal-delay-1">
+        <p>
+          My grandfather, Eber "Bo" Hampton, was a Chickasaw cowboy. Born to Mary Hawkins and Jesse Hampton,
+          he grew up on the family allotment in Indian Country. Like many Chickasaw folks of his generation,
+          Bo left Indian Country — bringing his children west to settle in California's Central Valley.
+          He made his home around Manteca, Stockton, and Modesto, and raised a family. He was a bow maker,
+          teaching his son Eber, who passed the skill to his sons.
+        </p>
+        <p>
+          I was born in Modesto and lived in Manteca as a boy — the same town Bo chose when he left
+          Oklahoma. Bo died of a heart attack a year before I was born, but the stories followed him forward.
+          Friends remembered him and his love of horses decades later.
+        </p>
+        <p>
+          From Bo's family came a generation that would carry their Chickasaw legacy in ways he might not
+          have predicted but would have been proud to witness. His son, my uncle
+          <a href="https://en.wikipedia.org/wiki/Eber_Hampton" target="_blank" rel="noopener">Eber Hampton</a>,
+          became a leader in the world of Indigenous education and institution-building. My sister Sierra
+          has spent five years traveling to Oklahoma to study Chickasaw food sovereignty. And I carry Bo's
+          name and his instinct for grassroots self-determination into my own work, even when the tools
+          look different.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BO HAMPTON PHOTOS -->
+  <div class="photo-pair reveal" style="background:var(--off-white);">
+    <figure>
+      <img
+        src="/images/mary-hawkins-hampton-family-photo.jpg"
+        alt="Mary Hawkins Hampton family photo — aunts Ella, Hattie, Jo and Grandma Mary Hawkins"
+        width="500" height="337" loading="lazy"
+      >
+      <figcaption>Aunts Ella, Hattie, Jo and Grandma Mary Hawkins.</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="/images/eber-bo-hampton-appaloosa-blaze.jpg"
+        alt="Bo Hampton on his Appaloosa horse, Blaze, in California"
+        width="500" height="500" loading="lazy"
+      >
+      <figcaption>Bo Hampton on his Appaloosa, Blaze, in California.</figcaption>
+    </figure>
+  </div>
+
+  <!-- BO PORTRAIT -->
+  <div style="background:var(--off-white); padding: 0 var(--gutter) clamp(64px,8vw,96px);">
+    <div class="photo-single reveal">
+      <figure>
+        <img
+          src="/images/eber-bo-hampton-portrait.jpg"
+          alt="Bo Hampton portrait"
+          width="540" loading="lazy"
+        >
+        <figcaption>Bo Hampton.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- DR. EBER HAMPTON -->
+  <section class="person-section" style="background: var(--white);">
+    <div class="person-inner photo-left">
+      <figure class="person-photo photo-framed reveal">
+        <img
+          src="/images/adriel-eber-hampton-queen-elizabeth-photo.jpg"
+          alt="Adriel with his uncle Dr. Eber Hampton, holding a framed photo of Eber with Queen Elizabeth II"
+          width="400" loading="lazy"
+        >
+        <figcaption>
+          Adriel with his uncle, Dr. Eber Hampton. They hold a framed photo of Eber
+          with Queen Elizabeth II during her 2005 visit to the First Nations University
+          of Canada in Regina, Saskatchewan. Photo by Luke Thomas, FogCityJournal.com.
+        </figcaption>
+      </figure>
+      <div class="person-content reveal reveal-delay-1">
+        <span class="person-section-label">Uncle · Talihina, Oklahoma → Saskatchewan, Canada</span>
+        <h2 class="person-name">Dr. Eber Hampton</h2>
+        <p class="person-role">
+          President, First Nations University of Canada, 1991–2005 ·
+          Canadian Commission for UNESCO
+        </p>
+        <div class="person-body">
+          <p>
+            My uncle Eber was born in Talihina, Oklahoma, at the Indian hospital that was closest to
+            our family allotment. After Bo moved the family to California, Eber grew up there and
+            went on to study psychology before finding his life's work in Indigenous education.
+            He led the Harvard American Indian Program, worked in land-based education in Alaska,
+            then in 1991 was appointed president of the Saskatchewan Indian Federated College in
+            Regina.
+          </p>
+          <p>
+            Over thirteen years, he helped transform the institution into its current form,
+            <a href="https://www.firstnationsuniversity.ca/" target="_blank" rel="noopener">First Nations University of Canada</a>.
+            He was instrumental in overseeing the construction of a striking new campus designed
+            by architect Douglas Cardinal, which opened in 2003. Queen Elizabeth II presented
+            the university with a stone from Balmoral Castle during Saskatchewan's centennial
+            in 2005. Eber served on the Canadian Commission for UNESCO and has been celebrated
+            for his leadership in Indigenous education.
+          </p>
+          <p>
+            Eber showed our family what it looks like to build sovereign institutions — not to fit
+            into someone else's system, but to create your own.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOHN G. HAMPTON -->
+  <section class="person-section" style="background: var(--off-white);">
+    <div class="person-inner photo-right">
+      <div class="person-content reveal">
+        <span class="person-section-label">Cousin · Regina, Saskatchewan, Canada</span>
+        <h2 class="person-name">John G. Hampton</h2>
+        <p class="person-role">
+          Executive Director &amp; CEO, MacKenzie Art Gallery ·
+          First Indigenous director of a major Canadian public gallery
+        </p>
+        <div class="person-body">
+          <p>
+            My cousin John, Eber's child, grew up in Regina and is a curator, artist, and
+            administrator. In 2020, they became the first Indigenous person to lead a major
+            public art gallery in Canada when they were appointed Executive Director and CEO
+            of the <a href="https://mackenzie.art/" target="_blank" rel="noopener">MacKenzie Art Gallery</a>.
+            Their work centers on decolonial curatorial practice and what they call "cultural health."
+          </p>
+          <p>
+            John is a citizen of the Chickasaw Nation, the United States, and Canada — a reminder
+            that the borders drawn across our continent don't define who we are. They co-chair the
+            Steering Committee for the Canadian Arts Summit, formerly co-chaired the board of the
+            Indigenous Curatorial Collective, and hold several other advisory positions across Canada.
+          </p>
+          <p>
+            John's leadership in the Canadian art world represents something our family takes
+            seriously: the idea that Indigenous people don't just participate in institutions — we
+            lead them. John also studies and practices speaking and writing Chikashshanompa',
+            the Chickasaw language.
+          </p>
+        </div>
+      </div>
+      <!-- No photo available for John — placeholder intentionally omitted per editorial guidelines -->
+    </div>
+  </section>
+
+  <!-- SIERRA HAMPTON -->
+  <section class="person-section" style="background: var(--white);">
+    <div class="person-inner photo-left">
+      <figure class="person-photo photo-framed reveal">
+        <img
+          src="/images/adriel-sierra-hampton.jpg"
+          alt="Adriel with his sister Sierra Hampton"
+          width="400" loading="lazy"
+        >
+        <figcaption>
+          Adriel with his sister, Sierra Hampton, UC Berkeley Chancellor's Fellow
+          and Chickasaw food sovereignty researcher.
+        </figcaption>
+      </figure>
+      <div class="person-content reveal reveal-delay-1">
+        <span class="person-section-label">Sister · California → Ada, Oklahoma</span>
+        <h2 class="person-name">Sierra Hampton</h2>
+        <p class="person-role">
+          UC Berkeley Chancellor's Fellow · PhD Candidate, Environmental Science,
+          Policy &amp; Management · Chickasaw Food Sovereignty Researcher
+        </p>
+        <div class="person-body">
+          <p>
+            My sister <a href="https://issi.berkeley.edu/people/sierra-hampton" target="_blank" rel="noopener">Sierra Hampton</a>
+            is completing her PhD at UC Berkeley, where she is a Chancellor's Fellow. Her dissertation
+            is a community-based study focused on how Chickasaw citizens and the Nation navigate
+            challenges and strengthen our food sovereignty. Over the past five years, she has conducted
+            participatory research with dozens of Chickasaw citizens — talking with people about
+            hunting, fishing, gardening, cooking, seed keeping, and the values behind those practices.
+          </p>
+          <p>
+            She has traveled to Oklahoma for months at a time, funded in part by Chickasaw Nation
+            Higher Education Grants and foundation scholarships that supported her education from
+            community college onward. Before turning her focus to the Chickasaw Nation, Sierra studied
+            Māori self-determination in Aotearoa (New Zealand) for her master's thesis at Lund
+            University in Sweden.
+          </p>
+          <p>
+            Sierra's work isn't purely academic. She has volunteered extensively at the
+            <a href="https://www.chickasawculturalcenter.com/" target="_blank" rel="noopener">Chickasaw Cultural Center</a>
+            in Sulphur — working in their gardens, contributing to programming, and building
+            relationships with Nation departments and citizens on the ground. She recently purchased
+            a plot of land in Sulphur — a permanent stake in the community where she has spent years
+            doing this work. When she told me about it in the summer of 2024, she said: "Well the
+            Hampton name is back in Oklahoma, I bought property in Sulphur!"
+          </p>
+          <p>
+            In 2024, she presented "Chickasaw Food Sovereignty: From Yesterday to Today" at the
+            Chickasaw Historical Society's annual Ittafama Ithana (Gathering to Learn) Conference.
+            In February 2026, the Chickasaw Cultural Center hosted her again for a
+            <a href="https://www.facebook.com/ChickasawCCC/videos/872307565671850/?app=fbl" target="_blank" rel="noopener">public presentation on her research findings</a>,
+            livestreamed to over a thousand viewers. She plans to turn her dissertation into a
+            book for the public.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BERKELEY GRADUATION PHOTO -->
+  <div style="background:var(--white); padding: 0 var(--gutter) clamp(64px,8vw,96px);">
+    <div class="photo-single reveal">
+      <figure>
+        <img
+          src="/images/adriel-sierra-hampton-berkeley-graduation-2014.jpg"
+          alt="Adriel and Sierra at her UC Berkeley graduation, May 2014"
+          width="540" loading="lazy"
+        >
+        <figcaption>Adriel and Sierra at her UC Berkeley graduation, May 2014.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing-inner">
+      <span class="closing-label">What This Means to Me</span>
+      <h2>Sovereignty is not an abstract concept.</h2>
+      <p>
+        I work in grassroots organizing and digital strategy. I help organizations build power
+        from the ground up — identifying supporters, shaping messages, creating community. The
+        language I use is the language of campaigns and advertising, but the instinct behind it
+        comes from somewhere older.
+      </p>
+      <p>
+        In 2009, when I ran for Congress in the San Francisco East Bay — the first congressional
+        campaign launched on Twitter — the Chickasaw Times covered it under the headline
+        <a href="https://reader.mediawiremobile.com/ChickasawTimes/issues/102427/viewer?page=16" target="_blank" rel="noopener">"California Chickasaw running for open House seat in San Francisco district."</a>
+        I was proud to be claimed by the Nation's own newspaper as one of their people.
+      </p>
+      <p>
+        Sovereignty is not an abstract concept to me. I come from a family that has spent decades
+        building sovereign institutions — a university, a gallery, a body of research rooted in
+        Chickasaw knowledge. My grandfather Bo exercised sovereignty the way working people do:
+        by choosing where to live, how to raise his family, and what kind of life to build.
+      </p>
+      <p>
+        The Chickasaw Nation itself is one of the most effectively governed Indigenous nations
+        in the United States, with a long history of self-determination that predates and outlasts
+        every federal policy imposed upon it. Under the five-decade leadership of
+        <a href="https://governor.chickasaw.net/" target="_blank" rel="noopener">Chickasaw Governor Bill Anoatubby</a>,
+        tribal funding, operations, and assets have grown exponentially. A member of our Nation
+        represents Oklahoma in the U.S. House of Representatives. We are
+        <a href="https://aachompa.com/collections/chickasawpress-books/products/chickasaw-unconquered-unconquerable" target="_blank" rel="noopener">unconquered and unconquerable</a>.
+      </p>
+      <p>
+        When I talk about grassroots power, I'm drawing on that tradition — the belief that
+        communities have the right and the capacity to govern themselves, feed themselves,
+        educate themselves, and tell their own stories. That's what sovereignty means. That's
+        what my family has been doing for generations, from Indian Country to the Central Valley
+        to Saskatchewan to Ada, Oklahoma and back again.
+      </p>
+      <p>
+        I am a Chickasaw citizen, living and working in California, continuing our family legacy
+        with my three Chickasaw sons.
+      </p>
+      <p class="closing-phrase">Chikashsha poyakat iláyya'sha katihma.</p>
+    </div>
+  </section>
+
+  <!-- CODA -->
+  <div class="coda">
+    <div class="coda-inner">
+      <p>
+        The Chickasaw Nation is headquartered in Ada, Oklahoma. To learn more about Chickasaw
+        history, culture, and programs, visit <a href="https://www.chickasaw.net" target="_blank" rel="noopener">chickasaw.net</a>.
+        To explore Chickasaw media and storytelling, visit
+        <a href="https://www.chickasaw.tv" target="_blank" rel="noopener">chickasaw.tv</a>.
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="footer-brand">AHG</a>
+      <ul class="footer-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 The Adriel Hampton Group · Carlsbad, CA · Citizen of the Chickasaw Nation</p>
+    </div>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); }
+      }),
+      { threshold: 0.1 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

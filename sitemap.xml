@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url>
+    <loc>https://adrielhampton.com/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/online-to-offline-organizing</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/services/meta-lead-ads.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/services/static-sites-advocacy.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/chickasaw</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog index -->
+  <url>
+    <loc>https://adrielhampton.com/blog/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog posts -->
+  <url>
+    <loc>https://adrielhampton.com/blog/a-new-movement-for-a-better-california.html</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/blog/can-tech-help-get-out-the-vote-in-a-chaotic-election.html</loc>
+    <lastmod>2020-10-27</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/blog/everything-we-do-is-about-solid-execution-and-measurable-results.html</loc>
+    <lastmod>2020-05-04</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/blog/three-non-obvious-ways-the-covid-19-pandemic-changes-campaigning.html</loc>
+    <lastmod>2020-04-30</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/blog/election-2020-boots-on-the-ground-bits-in-the-cloud.html</loc>
+    <lastmod>2019-12-23</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/blog/juicing-your-twitter-visibility-secrets-of-an-unabashed-reply-guy.html</loc>
+    <lastmod>2019-05-26</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://adrielhampton.com/blog/other-campaign-media-dont-trade-off-with-email-and-wont-replace-it-anytime-soon.html</loc>
+    <lastmod>2018-10-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

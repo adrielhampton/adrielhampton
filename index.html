@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Adriel Hampton Group — Digital Acquisition for the Progressive Movement</title>
+  <meta name="description" content="Award-winning digital acquisition consultancy specializing in Meta lead ads and online-to-offline organizing infrastructure for progressive advocacy organizations. 2025 Reed Award winner.">
+  <meta property="og:title" content="The Adriel Hampton Group">
+  <meta property="og:description" content="Meta lead ads and O2O infrastructure for progressive advocacy organizations. 2025 Reed Award winner.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adrielhampton.com">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://adrielhampton.com/#adriel",
+        "name": "Adriel Hampton",
+        "jobTitle": "Founder, The Adriel Hampton Group",
+        "description": "Award-winning digital acquisition strategist specializing in Meta lead ads and online-to-offline organizing infrastructure for progressive advocacy organizations.",
+        "url": "https://adrielhampton.com",
+        "email": "adriel@adrielhampton.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Carlsbad",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/adrielhampton",
+          "https://consciousfathers.org"
+        ],
+        "award": "2025 Reed Award — Excellence in Political Campaigning: Best Use of AI Technology by a Creative Agency",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Chickasaw Nation"
+        },
+        "worksFor": {
+          "@id": "https://adrielhampton.com/#ahg"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://adrielhampton.com/#ahg",
+        "name": "The Adriel Hampton Group",
+        "alternateName": "AHG",
+        "url": "https://adrielhampton.com",
+        "email": "adriel@adrielhampton.com",
+        "description": "Digital acquisition consultancy specializing in Meta lead ads and online-to-offline organizing infrastructure for progressive advocacy organizations, c4s, and community organizing networks.",
+        "founder": { "@id": "https://adrielhampton.com/#adriel" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Carlsbad",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "areaServed": "US",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AHG Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Meta Lead Ads for Advocacy Organizations",
+                "url": "https://adrielhampton.com/services/meta-lead-ads.html",
+                "description": "Facebook and Instagram native lead forms that capture email and phone simultaneously for c4 advocacy orgs, community organizing networks, and issue campaigns."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "In-Field Message Testing",
+                "url": "https://adrielhampton.com/services/message-testing.html",
+                "description": "A/B message testing using paid social media to surface which frames move target audiences, with data visualizations comparing performance across audience segments."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Campaign Sites on GitHub Pages",
+                "url": "https://adrielhampton.com/services/static-sites-advocacy.html",
+                "description": "Static HTML campaign sites on GitHub Pages, managed through Google Sheets. Zero hosting costs, near-zero attack surface."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold:          #ECB770;
+      --gold-mid:      #D4955A;
+      --gold-dark:     #A8692E;
+      --teal:          #36D6C3;
+      --teal-dark:     #24B0A0;
+      --grey:          #B7A99A;
+      --grey-light:    #E2DCD6;
+      --pleather:      #504538;
+      --pleather-dark: #2E2720;
+      --white:         #FFFFFF;
+      --off-white:     #FAF8F5;
+      --warm-rule:     #EDE8E2;
+      --body-text:     #5A4D42;
+      --font-head:     'Hanuman', Georgia, serif;
+      --font-body:     'Rubik', system-ui, sans-serif;
+      --max:           1180px;
+      --gutter:        clamp(20px, 5vw, 52px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--body-text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-bottom: 14px;
+    }
+
+    .section-h2 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      color: var(--pleather);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 30px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--pleather); color: var(--gold); border-color: var(--pleather); }
+    .btn-primary:hover { background: var(--gold); color: var(--pleather); border-color: var(--gold); }
+    .btn-outline { background: transparent; color: var(--pleather); border-color: var(--pleather); }
+    .btn-outline:hover { background: var(--pleather); color: var(--gold); }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      border-bottom: 4px solid var(--gold);
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter);
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; flex-shrink: 0; }
+    .nav-ahg { font-family: var(--font-head); font-weight: 700; font-size: 1.65rem; color: var(--pleather); }
+    .nav-full-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pleather); transition: color 0.18s; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .nav-cta { background: var(--pleather) !important; color: var(--gold) !important; padding: 10px 22px; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--pleather) !important; }
+
+    /* HERO */
+    .hero {
+      background: var(--off-white);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 7px; height: 100%; background: var(--gold); z-index: 1;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(-55deg, transparent, transparent 40px, rgba(236,183,112,0.045) 40px, rgba(236,183,112,0.045) 41px);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: var(--max); margin: 0 auto; padding: clamp(56px,8vw,96px) var(--gutter);
+      display: grid; grid-template-columns: 1fr 360px; gap: 72px; align-items: center;
+      position: relative; z-index: 2;
+    }
+    .hero-award {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--pleather);
+      padding: 7px 18px; margin-bottom: 28px;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    }
+    .hero-award::before { content: '★'; }
+    .hero-h1 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(2.6rem, 4.8vw, 4.4rem);
+      line-height: 1.02; color: var(--pleather); letter-spacing: -0.015em; margin-bottom: 24px;
+    }
+    .hero-h1 em { font-style: normal; color: var(--gold-dark); }
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem); color: var(--body-text);
+      line-height: 1.75; max-width: 520px; margin-bottom: 40px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-photo-col { position: relative; }
+    .hero-photo-frame-bg {
+      position: absolute; top: 18px; left: 18px;
+      width: 100%; height: 100%;
+      border: 3px solid var(--gold); pointer-events: none;
+    }
+    .hero-photo {
+      width: 100%; aspect-ratio: 4 / 5; overflow: hidden;
+      position: relative; background: var(--pleather);
+    }
+    .hero-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+      display: block; transition: transform 0.5s ease;
+    }
+    .hero-photo:hover img { transform: scale(1.02); }
+
+    /* PROOF BAR */
+    .proof { background: var(--pleather-dark); }
+    .proof-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+    .proof-cell {
+      padding: clamp(24px,3vw,40px) 24px; text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.07);
+    }
+    .proof-cell:last-child { border-right: none; }
+    .proof-num { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.8rem,2.5vw,2.6rem); color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .proof-num.accent { color: var(--teal); }
+    .proof-label { font-size: 0.68rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); line-height: 1.5; }
+
+    /* MEDIA STRIP */
+    .media { background: var(--white); padding: 40px var(--gutter); border-bottom: 1px solid var(--warm-rule); }
+    .media-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); text-align: center; margin-bottom: 22px; }
+    .media-logos { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px 40px; }
+    .media-logo { font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; color: var(--grey); letter-spacing: 0.04em; transition: color 0.18s; white-space: nowrap; }
+    .media-logo:hover { color: var(--pleather); }
+
+    /* SERVICES */
+    .services { padding: clamp(72px,9vw,108px) var(--gutter); background: var(--white); }
+    .services-header { margin-bottom: 52px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--warm-rule); border-bottom: none; }
+    .svc {
+      padding: clamp(36px,4vw,52px) clamp(28px,3vw,44px);
+      border-right: 2px solid var(--warm-rule); border-bottom: 2px solid var(--warm-rule);
+      transition: background 0.2s;
+    }
+    .svc:last-child { border-right: none; }
+    .svc:hover { background: var(--off-white); }
+    .svc-num { font-family: var(--font-head); font-weight: 700; font-size: 2.8rem; color: var(--gold); opacity: 0.5; line-height: 1; margin-bottom: 18px; }
+    .svc-title { font-family: var(--font-head); font-weight: 700; font-size: 1.38rem; color: var(--pleather); line-height: 1.2; margin-bottom: 14px; }
+    .svc-desc { font-size: 0.9rem; color: var(--body-text); line-height: 1.78; margin-bottom: 28px; }
+    .svc-link { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); border-bottom: 2px solid currentColor; padding-bottom: 2px; transition: color 0.18s; }
+    .svc-link:hover { color: var(--gold-dark); }
+
+    /* CALLOUT BAND */
+    .callout { background: var(--gold); padding: clamp(56px,7vw,80px) var(--gutter); }
+    .callout-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+    .callout-h2 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.7rem,2.8vw,2.5rem); color: var(--pleather); line-height: 1.12; }
+    .callout-h2 span { color: var(--white); }
+
+    /* BIO */
+    .bio { padding: clamp(72px,9vw,108px) var(--gutter); background: var(--off-white); }
+    .bio-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: start; }
+    .bio-photo-wrap { position: relative; }
+    .bio-photo { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background: var(--pleather); position: relative; }
+    .bio-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background: var(--teal); }
+    .bio-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .bio-photo-offset { position: absolute; top: 14px; right: -14px; width: 100%; height: 100%; border: 3px solid var(--gold); z-index: -1; pointer-events: none; }
+    .bio-name { font-family: var(--font-head); font-weight: 700; font-size: clamp(2rem,3vw,2.8rem); color: var(--pleather); line-height: 1.05; margin-bottom: 6px; }
+    .bio-role { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 28px; }
+    .bio-p { font-size: 0.98rem; color: var(--body-text); line-height: 1.82; margin-bottom: 16px; }
+    .bio-p a { color: var(--teal-dark); border-bottom: 1px solid currentColor; transition: color 0.18s; }
+    .bio-p a:hover { color: var(--gold-dark); }
+    .bio-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+    .bio-chip { background: var(--white); border: 1.5px solid var(--warm-rule); color: var(--body-text); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 14px; }
+
+    /* TESTIMONIALS */
+    .testimonials { padding: clamp(72px,9vw,108px) var(--gutter); background: var(--pleather-dark); }
+    .testimonials .eyebrow { color: var(--gold); }
+    .testimonials .section-h2 { color: var(--white); margin-bottom: 52px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 36px 32px; }
+    .testi-mark { font-family: var(--font-head); font-weight: 700; font-size: 4rem; color: var(--gold); opacity: 0.4; line-height: 0.8; margin-bottom: 18px; display: block; }
+    .testi-quote { font-size: 0.95rem; font-style: italic; color: rgba(255,255,255,0.78); line-height: 1.75; margin-bottom: 24px; }
+    .testi-attr { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+    .testi-org { font-size: 0.72rem; font-weight: 400; color: var(--grey); letter-spacing: 0.06em; }
+
+    /* CONTACT */
+    .contact { padding: clamp(72px,9vw,108px) var(--gutter); background: var(--off-white); }
+    .contact-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .contact-h2 { font-family: var(--font-head); font-weight: 700; font-size: clamp(2rem,3.2vw,3rem); color: var(--pleather); line-height: 1.05; margin-bottom: 20px; }
+    .contact-p { font-size: 0.98rem; color: var(--body-text); line-height: 1.8; margin-bottom: 24px; }
+    .contact-email-link { display: inline-flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 600; color: var(--pleather); border-bottom: 2px solid var(--gold); padding-bottom: 4px; transition: color 0.18s; }
+    .contact-email-link:hover { color: var(--teal-dark); }
+    .contact-detail-item { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--warm-rule); }
+    .contact-detail-item:last-child { border-bottom: none; margin-bottom: 0; }
+    .cd-label { display: block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey); margin-bottom: 6px; }
+    .cd-value { font-size: 0.95rem; color: var(--body-text); line-height: 1.6; }
+
+    /* FOOTER */
+    .footer { background: var(--pleather-dark); padding: 36px var(--gutter); border-top: 4px solid var(--gold); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-brand { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; color: var(--gold); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); transition: color 0.18s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: rgba(183,169,154,0.5); letter-spacing: 0.04em; width: 100%; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+    /* REVEAL ANIMATIONS */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.in-view { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 44px; }
+      .hero-photo-col { max-width: 340px; }
+      .hero-photo-frame-bg { display: none; }
+      .proof-inner { grid-template-columns: repeat(2, 1fr); }
+      .proof-cell:nth-child(2) { border-right: none; }
+      .proof-cell:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.07); }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc { border-right: none; }
+      .callout-inner { grid-template-columns: 1fr; gap: 28px; }
+      .bio-inner { grid-template-columns: 1fr; gap: 40px; }
+      .bio-photo { max-width: 280px; }
+      .bio-photo-offset { display: none; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .nav-full-name { display: none; }
+      .nav-links .hide-mobile { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <span class="nav-ahg">AHG</span>
+        <span class="nav-full-name">The Adriel Hampton Group</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#services" class="hide-mobile">Services</a></li>
+        <li><a href="#about" class="hide-mobile">About</a></li>
+        <li><a href="/blog/" class="hide-mobile">Blog</a></li>
+        <li><a href="#contact" class="nav-cta btn">Let's Talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-award">2025 Reed Award — Best Use of AI Technology</div>
+        <h1 class="hero-h1">
+          Online-to-offline<br>
+          acquisition for<br>
+          <em>the progressive<br>movement.</em>
+        </h1>
+        <p class="hero-sub">
+          The Adriel Hampton Group helps advocacy organizations, c4s, and community
+          organizing networks turn digital ads into real people in the room.
+          We capture email <em>and</em> phone — simultaneously — so your campaign
+          has what it needs to move people offline.
+        </p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">See Our Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-photo-col">
+        <div class="hero-photo-frame-bg"></div>
+        <div class="hero-photo">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D5603AQHz_oMYe7SG5Q/profile-displayphoto-shrink_400_400/B56ZW7Y4FqGUAg-/0/1742605616222?e=2147483647&v=beta&t=MX6qM0hkz_RA4MALssgZU6LEJFK86pH7ve3C09vOedc"
+            alt="Adriel Hampton, founder of The Adriel Hampton Group"
+            width="360" height="450" loading="eager"
+          >
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="proof" aria-label="Key metrics">
+    <div class="proof-inner">
+      <div class="proof-cell">
+        <div class="proof-num">$3–5</div>
+        <div class="proof-label">Cost per lead<br>email + phone</div>
+      </div>
+      <div class="proof-cell">
+        <div class="proof-num accent">74%</div>
+        <div class="proof-label">CPL improvement,<br>Spanish-language campaigns</div>
+      </div>
+      <div class="proof-cell">
+        <div class="proof-num">10+</div>
+        <div class="proof-label">Years running<br>progressive campaigns</div>
+      </div>
+      <div class="proof-cell">
+        <div class="proof-num">Reed</div>
+        <div class="proof-label">Award 2025<br>Digital excellence</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="media" aria-label="Media coverage">
+    <p class="media-label">As featured in</p>
+    <div class="media-logos">
+      <span class="media-logo">MIT Technology Review</span>
+      <span class="media-logo">NBC</span>
+      <span class="media-logo">CNN</span>
+      <span class="media-logo">NPR</span>
+      <span class="media-logo">BBC</span>
+      <span class="media-logo">The Guardian</span>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="wrap">
+      <div class="services-header reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2 class="section-h2" id="services-heading">
+          Three ways to work together.<br>One goal: real people, real action.
+        </h2>
+      </div>
+      <div class="services-grid">
+        <div class="svc reveal reveal-delay-1">
+          <div class="svc-num">01</div>
+          <h3 class="svc-title">Meta Lead Ads for Advocacy</h3>
+          <p class="svc-desc">
+            Facebook and Instagram native lead forms capture email and phone
+            simultaneously — no landing page, no drop-off. We run and optimize campaigns
+            for c4 advocacy orgs, community organizing networks, tenant justice groups,
+            and worker organizing efforts. Bilingual campaigns. Sub-$5 CPL benchmarks
+            at parity with M&R email-only industry rates.
+          </p>
+          <a href="/services/meta-lead-ads.html" class="svc-link">Learn more →</a>
+        </div>
+        <div class="svc reveal reveal-delay-2">
+          <div class="svc-num">02</div>
+          <h3 class="svc-title">Campaign Sites That Work as Hard as You Do</h3>
+          <p class="svc-desc">
+            Static HTML sites on GitHub Pages, powered by Google Sheets as a
+            client-managed CMS. Zero hosting costs. Near-zero attack surface.
+            Built for advocacy campaigns that need to move fast, stay secure,
+            and give your team editorial control — no developer on call required.
+          </p>
+          <a href="/services/static-sites-advocacy.html" class="svc-link">Learn more →</a>
+        </div>
+        <div class="svc reveal reveal-delay-3">
+          <div class="svc-num">03</div>
+          <h3 class="svc-title">In-Field Message Testing</h3>
+          <p class="svc-desc">
+            Real-world A/B testing using paid social to surface what moves your audience
+            before you go door-to-door or into earned media. We test messages against
+            thousands of real social media users and deliver data visualizations comparing
+            performance across audiences — poll-like insights at a fraction of polling costs.
+          </p>
+          <a href="/services/message-testing.html" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="callout" aria-label="O2O organizing">
+    <div class="callout-inner">
+      <h2 class="callout-h2">
+        Everyone in 2026 is talking about<br>
+        <span>online-to-offline organizing.</span><br>
+        We've been building the infrastructure for it.
+      </h2>
+      <a href="#contact" class="btn btn-primary">Work With Us</a>
+    </div>
+  </section>
+
+  <section class="bio" id="about" aria-labelledby="bio-heading">
+    <div class="bio-inner">
+      <div class="bio-photo-wrap reveal">
+        <div class="bio-photo">
+          <!-- TODO: Replace with second photo (action/event shot, different from hero headshot) -->
+          <img
+            src="https://media.licdn.com/dms/image/v2/D5603AQHz_oMYe7SG5Q/profile-displayphoto-shrink_400_400/B56ZW7Y4FqGUAg-/0/1742605616222?e=2147483647&v=beta&t=MX6qM0hkz_RA4MALssgZU6LEJFK86pH7ve3C09vOedc"
+            alt="Adriel Hampton" width="320" height="320" loading="lazy"
+          >
+        </div>
+        <div class="bio-photo-offset"></div>
+      </div>
+      <div class="bio-content reveal reveal-delay-1">
+        <h2 class="bio-name" id="bio-heading">Adriel Hampton</h2>
+        <p class="bio-role">Founder, The Adriel Hampton Group · Carlsbad, CA</p>
+        <p class="bio-p">
+          I'm a digital acquisition strategist with over a decade of experience running
+          paid social campaigns for progressive organizations. AHG is a boutique
+          consultancy — I work directly with every client. No account manager handoffs.
+          No junior staff on your campaign.
+        </p>
+        <p class="bio-p">
+          My specialty is Meta lead ads for member-mobilization organizations: the
+          campaigns that need to put real people on phones, at doors, and in rooms.
+          The dual email + phone capture model I've built is designed specifically for
+          organizations that measure success by offline action, not just list size.
+        </p>
+        <p class="bio-p">
+          I'm a <strong>2025 Reed Award winner</strong> for digital excellence in
+          political and advocacy campaigning. My work has been covered by
+          <strong>MIT Technology Review, NBC, CNN, NPR,</strong> and the <strong>BBC.</strong>
+          I'm a citizen of the <strong>Chickasaw Nation</strong> and the founder of
+          <a href="https://consciousfathers.org" target="_blank" rel="noopener">Conscious Fathers</a>,
+          a community resource and podcast for engaged dads.
+        </p>
+        <div class="bio-chips">
+          <span class="bio-chip">Meta Lead Ads</span>
+          <span class="bio-chip">C4 Advocacy</span>
+          <span class="bio-chip">Community Organizing</span>
+          <span class="bio-chip">O2O Campaigns</span>
+          <span class="bio-chip">Tenant Justice</span>
+          <span class="bio-chip">Immigrant Rights</span>
+          <span class="bio-chip">Reed Award 2025</span>
+          <span class="bio-chip">Chickasaw Nation Citizen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" aria-labelledby="testi-heading">
+    <div class="wrap">
+      <span class="eyebrow">Client Results</span>
+      <h2 class="section-h2" id="testi-heading">What organizers say</h2>
+      <div class="testi-grid">
+        <div class="testi reveal">
+          <span class="testi-mark">"</span>
+          <p class="testi-quote">
+            I want Adriel's brain! One hour of his time is worth five hours of working
+            with anyone else. He's a brilliant strategist with excellent political instincts
+            and the heart of a true activist and visionary. When you need a true partner
+            who is as invested in a project as you are, this is who you want on your team.
+          </p>
+          <div class="testi-attr">La Donna Lokey</div>
+          <div class="testi-org">Talent Acquisition Project Manager, IBM</div>
+        </div>
+        <div class="testi reveal reveal-delay-1">
+          <span class="testi-mark">"</span>
+          <p class="testi-quote">
+            Adriel's genius with social media, brand awareness, customer acquisition,
+            and general internet marketing has really put us on the path to success.
+            His deep knowledge of politics and government has been invaluable, but his
+            grasp of modern ways of communicating has helped us the most.
+          </p>
+          <div class="testi-attr">Karen Suhaka</div>
+          <div class="testi-org">Founder &amp; President, LegiNation</div>
+        </div>
+        <div class="testi reveal reveal-delay-2">
+          <span class="testi-mark">"</span>
+          <p class="testi-quote">
+            Adriel combines deep understanding of technology with first-hand knowledge
+            of community building, and a rare ability to measure impact. If you need
+            someone who can put his head down and power through obstacles to get a
+            tough-but-crucial job done, Adriel is your guy.
+          </p>
+          <div class="testi-attr">Michael Moschella</div>
+          <div class="testi-org">Executive Director, DKC Analytics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-inner">
+      <div class="reveal">
+        <span class="eyebrow">Get In Touch</span>
+        <h2 class="contact-h2" id="contact-heading">
+          Ready to build your O2O infrastructure?
+        </h2>
+        <p class="contact-p">
+          AHG takes on a small number of retainer clients at a time. If you're running
+          a c4 advocacy campaign, community organizing effort, or issue campaign and
+          need real acquisition — email and phone at scale — let's talk.
+        </p>
+        <p class="contact-p">I respond to every inquiry personally.</p>
+        <a href="mailto:adriel@adrielhampton.com" class="contact-email-link">
+          adriel@adrielhampton.com
+        </a>
+      </div>
+      <div class="contact-details reveal reveal-delay-1">
+        <div class="contact-detail-item">
+          <span class="cd-label">Best fit for</span>
+          <span class="cd-value">C4 advocacy orgs · Community organizing networks · Tenant &amp; housing justice · Worker organizing · Immigrant rights campaigns</span>
+        </div>
+        <div class="contact-detail-item">
+          <span class="cd-label">Retainer range</span>
+          <span class="cd-value">$3,000 – $5,000 / month</span>
+        </div>
+        <div class="contact-detail-item">
+          <span class="cd-label">Based in</span>
+          <span class="cd-value">Carlsbad, California · Available nationally</span>
+        </div>
+        <div class="contact-detail-item">
+          <span class="cd-label">Also builds</span>
+          <span class="cd-value">Static HTML campaign sites on GitHub Pages — fast, secure, zero hosting costs, Google Sheets-managed. In-field message testing also available as a standalone project.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">AHG</div>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+      </ul>
+      <p class="footer-copy">
+        © 2025 The Adriel Hampton Group · Carlsbad, CA ·
+        Citizen of the Chickasaw Nation ·
+        <a href="https://consciousfathers.org" target="_blank" rel="noopener" style="color:var(--gold);border-bottom:1px solid currentColor;">consciousfathers.org</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); }
+      }),
+      { threshold: 0.12 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

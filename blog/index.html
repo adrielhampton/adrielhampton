@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — The Adriel Hampton Group</title>
+  <meta name="description" content="Writing on digital organizing, political campaigns, Meta lead ads, and the intersection of technology and grassroots power. By Adriel Hampton.">
+  <meta property="og:title" content="Blog — The Adriel Hampton Group">
+  <meta property="og:description" content="Writing on digital organizing, political campaigns, Meta lead ads, and the intersection of technology and grassroots power.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adrielhampton.com/blog/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold:          #ECB770;
+      --gold-dark:     #A8692E;
+      --teal:          #36D6C3;
+      --teal-dark:     #24B0A0;
+      --grey:          #B7A99A;
+      --pleather:      #504538;
+      --pleather-dark: #2E2720;
+      --white:         #FFFFFF;
+      --off-white:     #FAF8F5;
+      --warm-rule:     #EDE8E2;
+      --body-text:     #5A4D42;
+      --font-head:     'Hanuman', Georgia, serif;
+      --font-body:     'Rubik', system-ui, sans-serif;
+      --max:           1180px;
+      --gutter:        clamp(20px, 5vw, 52px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--body-text); background: var(--white); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 4px solid var(--gold); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; flex-shrink: 0; }
+    .nav-ahg { font-family: var(--font-head); font-weight: 700; font-size: 1.65rem; color: var(--pleather); }
+    .nav-full-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pleather); transition: color 0.18s; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .nav-cta { background: var(--pleather) !important; color: var(--gold) !important; padding: 10px 22px; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--pleather) !important; }
+
+    /* PAGE HERO */
+    .page-hero {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--warm-rule);
+      padding: clamp(56px,8vw,88px) var(--gutter) clamp(44px,6vw,64px);
+      position: relative;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 7px; height: 100%; background: var(--gold);
+    }
+    .hero-inner { max-width: var(--max); margin: 0 auto; }
+    .page-eyebrow {
+      display: block; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--teal-dark); margin-bottom: 14px;
+    }
+    .page-h1 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      color: var(--pleather); line-height: 1.04;
+      letter-spacing: -0.015em; margin-bottom: 18px;
+    }
+    .page-sub {
+      font-size: 1.05rem; color: #6B5D52;
+      line-height: 1.72; max-width: 560px;
+    }
+
+    /* POSTS GRID */
+    .posts-section {
+      padding: clamp(56px,8vw,88px) var(--gutter);
+      background: var(--white);
+    }
+    .posts-inner { max-width: var(--max); margin: 0 auto; }
+
+    .post-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0;
+      border-bottom: 2px solid var(--warm-rule);
+      transition: background 0.18s;
+    }
+    .post-card:first-child { border-top: 2px solid var(--warm-rule); }
+    .post-card:hover { background: var(--off-white); }
+    .post-card:hover .post-card-title { color: var(--gold-dark); }
+
+    .post-card-date-col {
+      padding: 32px 28px 32px 0;
+      border-right: 2px solid var(--warm-rule);
+      display: flex; flex-direction: column;
+      gap: 8px; align-items: flex-start;
+      flex-shrink: 0;
+    }
+    .pc-year {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 1.5rem; color: var(--gold);
+      opacity: 0.6; line-height: 1;
+    }
+    .pc-monthday {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--grey);
+    }
+    .pc-cat {
+      display: inline-block;
+      background: transparent; border: 1.5px solid var(--warm-rule);
+      color: var(--grey); font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 3px 8px; margin-top: 4px;
+    }
+
+    .post-card-body {
+      padding: 32px 0 32px 36px;
+    }
+    .post-card-title {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+      color: var(--pleather); line-height: 1.2;
+      margin-bottom: 12px;
+      transition: color 0.18s;
+    }
+    .post-card-desc {
+      font-size: 0.9rem; color: var(--body-text);
+      line-height: 1.72; max-width: 640px;
+      margin-bottom: 16px;
+    }
+    .post-card-link {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--teal-dark);
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 1px;
+      transition: color 0.18s;
+    }
+    .post-card-link:hover { color: var(--gold-dark); }
+
+    /* Make whole card clickable */
+    .post-card-link-wrap {
+      display: contents;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: var(--pleather-dark);
+      padding: clamp(52px,6vw,72px) var(--gutter);
+    }
+    .cta-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+    }
+    .cta-h2 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      color: var(--white); line-height: 1.12;
+    }
+    .cta-h2 span { color: var(--gold); }
+    .btn-gold {
+      display: inline-block; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 30px; background: var(--gold); color: var(--pleather);
+      border: 2px solid var(--gold); white-space: nowrap;
+      transition: background 0.18s, color 0.18s;
+    }
+    .btn-gold:hover { background: var(--pleather); color: var(--gold); border-color: var(--pleather); }
+
+    /* FOOTER */
+    .footer { background: var(--pleather-dark); padding: 36px var(--gutter); border-top: 4px solid var(--gold); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-brand { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; color: var(--gold); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); transition: color 0.18s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: rgba(183,169,154,0.5); letter-spacing: 0.04em; width: 100%; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+    @media (max-width: 640px) {
+      .nav-full-name { display: none; }
+      .nav-links .hide-mobile { display: none; }
+      .post-card { grid-template-columns: 1fr; }
+      .post-card-date-col { flex-direction: row; align-items: center; gap: 16px; padding: 20px 0 0; border-right: none; border-bottom: 1px solid var(--warm-rule); }
+      .post-card-body { padding: 20px 0 28px; }
+      .cta-inner { grid-template-columns: 1fr; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="/">
+        <div class="nav-brand">
+          <span class="nav-ahg">AHG</span>
+          <span class="nav-full-name">The Adriel Hampton Group</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#services" class="hide-mobile">Services</a></li>
+        <li><a href="/#about" class="hide-mobile">About</a></li>
+        <li><a href="/blog/" aria-current="page">Blog</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="hero-inner">
+      <span class="page-eyebrow">Writing &amp; Ideas</span>
+      <h1 class="page-h1">Notes from the field.</h1>
+      <p class="page-sub">
+        Digital organizing, political campaigns, the mechanics of Meta ads,
+        and what happens when technology meets grassroots power.
+        By Adriel Hampton.
+      </p>
+    </div>
+  </header>
+
+  <section class="posts-section">
+    <div class="posts-inner">
+
+      <article class="post-card">
+        <div class="post-card-date-col">
+          <span class="pc-year">2023</span>
+          <span class="pc-monthday">Nov 12</span>
+          <span class="pc-cat">Organizing</span>
+        </div>
+        <div class="post-card-body">
+          <h2 class="post-card-title">A New Movement for a Better California</h2>
+          <p class="post-card-desc">California is a state of great diversity and innovation — and also great inequality. A look at Rise Up California, a new grassroots movement building power for working people across the state.</p>
+          <a href="/blog/a-new-movement-for-a-better-california.html" class="post-card-link">Read the post →</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-card-date-col">
+          <span class="pc-year">2020</span>
+          <span class="pc-monthday">Oct 27</span>
+          <span class="pc-cat">Digital Strategy</span>
+        </div>
+        <div class="post-card-body">
+          <h2 class="post-card-title">Can Tech Help Get Out the Vote in a Chaotic Election?</h2>
+          <p class="post-card-desc">Success in getting out the vote acts as the canary in the coal mine for American democracy. A look at how technology is helping — and where its limits are in a pandemic election cycle.</p>
+          <a href="/blog/can-tech-help-get-out-the-vote-in-a-chaotic-election.html" class="post-card-link">Read the post →</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-card-date-col">
+          <span class="pc-year">2020</span>
+          <span class="pc-monthday">May 4</span>
+          <span class="pc-cat">Agency</span>
+        </div>
+        <div class="post-card-body">
+          <h2 class="post-card-title">'Everything We Do is About Solid Execution and Measurable Results'</h2>
+          <p class="post-card-desc">An interview about what makes The Adriel Hampton Group tick — smart teams, organizing technology, and the discipline of maximum impact for effort.</p>
+          <a href="/blog/everything-we-do-is-about-solid-execution-and-measurable-results.html" class="post-card-link">Read the post →</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-card-date-col">
+          <span class="pc-year">2020</span>
+          <span class="pc-monthday">Apr 30</span>
+          <span class="pc-cat">Campaigns</span>
+        </div>
+        <div class="post-card-body">
+          <h2 class="post-card-title">Three Non-Obvious Ways the Covid-19 Pandemic Changes Campaigning</h2>
+          <p class="post-card-desc">With no conventional ground game, three interesting things are happening in campaigns — interconnectivity, new technology, and a shift from retail to digital-first organizing.</p>
+          <a href="/blog/three-non-obvious-ways-the-covid-19-pandemic-changes-campaigning.html" class="post-card-link">Read the post →</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-card-date-col">
+          <span class="pc-year">2019</span>
+          <span class="pc-monthday">Dec 23</span>
+          <span class="pc-cat">Digital Strategy</span>
+        </div>
+        <div class="post-card-body">
+          <h2 class="post-card-title">Election 2020: Boots on the Ground &amp; Bits in the Cloud</h2>
+          <p class="post-card-desc">Candidates need both a ground game and a digital game. A look at the 2020 presidential race through the lens of organizing infrastructure — field offices, volunteer operations, and digital reach.</p>
+          <a href="/blog/election-2020-boots-on-the-ground-bits-in-the-cloud.html" class="post-card-link">Read the post →</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-card-date-col">
+          <span class="pc-year">2019</span>
+          <span class="pc-monthday">May 26</span>
+          <span class="pc-cat">Media &amp; Comms</span>
+        </div>
+        <div class="post-card-body">
+          <h2 class="post-card-title">Juicing Your Twitter Visibility to Get Quoted by the Media</h2>
+          <p class="post-card-desc">How I generated millions of Twitter impressions and earned coverage in five news articles in 28 days — and the simple, replicable lessons behind it.</p>
+          <a href="/blog/juicing-your-twitter-visibility-secrets-of-an-unabashed-reply-guy.html" class="post-card-link">Read the post →</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-card-date-col">
+          <span class="pc-year">2018</span>
+          <span class="pc-monthday">Oct 1</span>
+          <span class="pc-cat">Digital Strategy</span>
+        </div>
+        <div class="post-card-body">
+          <h2 class="post-card-title">Other Campaign Media Don't Trade Off with Email — and Won't Replace It Anytime Soon</h2>
+          <p class="post-card-desc">Email is the great synthesizer of political media. Here's why viral video, social, and text complement email rather than replace it — and what makes the difference between a good email program and a bad one.</p>
+          <a href="/blog/other-campaign-media-dont-trade-off-with-email-and-wont-replace-it-anytime-soon.html" class="post-card-link">Read the post →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-inner">
+      <h2 class="cta-h2">
+        Ready to put these ideas to work<br>
+        <span>for your campaign?</span>
+      </h2>
+      <a href="/#contact" class="btn-gold">Let's Talk</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="footer-brand">AHG</a>
+      <ul class="footer-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 The Adriel Hampton Group · Carlsbad, CA · Citizen of the Chickasaw Nation</p>
+    </div>
+  </footer>
+
+</body>
+</html>
