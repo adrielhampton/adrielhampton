@@ -223,21 +223,50 @@
     }
     .person-body p:last-child { margin-bottom: 0; }
 
-    /* EXTRA PHOTOS — two-up or single within a section */
-    .photo-pair {
+    /* ============================================================
+       PHOTO GALLERY — height-normalized rows.
+       Images share a uniform height so rows never look ragged,
+       and aspect ratios are preserved (no cropping of family photos).
+       ============================================================ */
+    .photo-gallery {
+      padding: clamp(12px,2vw,24px) var(--gutter) clamp(10px,2vw,22px);
+    }
+    .photo-row {
       max-width: var(--max); margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-      padding: 0 var(--gutter) clamp(48px,6vw,72px);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 28px 28px;
+      align-items: start;
     }
-    .photo-single {
-      max-width: 540px; margin: 0 auto;
-      padding: 0 var(--gutter) clamp(48px,6vw,72px);
+    .photo-row + .photo-row { margin-top: clamp(28px,3.5vw,44px); }
+    .photo-row figure { display: flex; flex-direction: column; }
+    .photo-row img {
+      height: clamp(240px, 26vw, 340px);
+      width: auto; max-width: 100%;
+      object-fit: contain;
+      margin: 0 auto;
     }
-    .photo-single figure, .photo-pair figure { }
-    .photo-single figcaption, .photo-pair figcaption {
+    .photo-row figcaption {
       font-size: 0.75rem; font-style: italic;
       color: var(--grey); line-height: 1.55;
-      margin-top: 10px; padding-top: 10px;
+      margin-top: 14px; padding-top: 10px;
+      border-top: 1px solid var(--warm-rule);
+      width: 100%;
+    }
+
+    /* Single feature photo — no nested padding wrappers */
+    .photo-single-section {
+      padding: clamp(12px,2vw,24px) var(--gutter) clamp(10px,2vw,22px);
+    }
+    .photo-single-fig {
+      max-width: 460px; margin: 0 auto;
+    }
+    .photo-single-fig img {
+      width: 100%; height: auto; max-height: 72vh;
+      object-fit: contain;
+    }
+    .photo-single-fig figcaption {
+      font-size: 0.75rem; font-style: italic;
+      color: var(--grey); line-height: 1.55;
+      margin-top: 14px; padding-top: 10px;
       border-top: 1px solid var(--warm-rule);
     }
 
@@ -310,10 +339,6 @@
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.22s; }
 
-    /* NOTE: Images below use live WordPress URLs.
-       Before going live on GitHub Pages, download all images to /images/
-       and update src attributes to relative paths. */
-
     /* RESPONSIVE */
     @media (max-width: 960px) {
       .intro-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -323,8 +348,13 @@
       .person-inner.photo-right .person-photo { order: 1; }
       .person-inner.photo-right .person-content { order: 2; }
       .person-photo { max-width: 440px; }
-      .photo-pair { grid-template-columns: 1fr; max-width: 440px; }
       .photo-framed::after { display: none; }
+
+      /* Gallery rows collapse to a single centered column on tablet/mobile */
+      .photo-row { grid-template-columns: 1fr; max-width: 460px; }
+      .photo-row + .photo-row { margin-top: clamp(28px,6vw,40px); }
+      .photo-row figure + figure { margin-top: clamp(28px,6vw,40px); }
+      .photo-row img { height: auto; width: auto; max-width: 100%; max-height: 68vh; }
     }
     @media (max-width: 600px) {
       .nav-full-name { display: none; }
@@ -344,7 +374,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="/#services" class="hide-mobile">Services</a></li>
-        <li><a href="/#about" class="hide-mobile">About</a></li>
+        <li><a href="/about" class="hide-mobile">About</a></li>
         <li><a href="/blog/" class="hide-mobile">Blog</a></li>
         <li><a href="/#contact" class="nav-cta btn">Let's Talk</a></li>
       </ul>
@@ -423,39 +453,45 @@
     </div>
   </section>
 
-  <!-- BO HAMPTON PHOTOS -->
-  <div class="photo-pair reveal" style="background:var(--off-white);">
-    <figure>
-      <img
-        src="/images/mary-hawkins-hampton-family-photo.jpeg"
-        alt="Mary Hawkins Hampton family photo — aunts Ella, Hattie, Jo and Grandma Mary Hawkins"
-        width="500" height="337" loading="lazy"
-      >
-      <figcaption>Aunts Ella, Hattie, Jo and Grandma Mary Hawkins.</figcaption>
-    </figure>
-    <figure>
-      <img
-        src="/images/eber-bo-hampton-appaloosa-blaze.jpg"
-        alt="Bo Hampton on his Appaloosa horse, Blaze, in California"
-        width="500" height="500" loading="lazy"
-      >
-      <figcaption>Bo Hampton on his Appaloosa, Blaze, in California.</figcaption>
-    </figure>
-  </div>
-
-  <!-- BO PORTRAIT -->
-  <div style="background:var(--off-white); padding: 0 var(--gutter) clamp(64px,8vw,96px);">
-    <div class="photo-single reveal">
+  <!-- BO HAMPTON PHOTO GALLERY -->
+  <section class="photo-gallery" style="background:var(--off-white);">
+    <div class="photo-row reveal">
+      <figure>
+        <img
+          src="/images/mary-hawkins-hampton-family-photo.jpeg"
+          alt="Mary Hawkins Hampton family photo — aunts Ella, Hattie, Jo and Grandma Mary Hawkins"
+          loading="lazy"
+        >
+        <figcaption>Aunts Ella, Hattie, Jo and Grandma Mary Hawkins.</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="/images/eber-bo-hampton-appaloosa-blaze.jpg"
+          alt="Bo Hampton on his Appaloosa horse, Blaze, in California"
+          loading="lazy"
+        >
+        <figcaption>Bo Hampton on his Appaloosa, Blaze, in California.</figcaption>
+      </figure>
+    </div>
+    <div class="photo-row reveal">
       <figure>
         <img
           src="/images/eber-bo-hampton-portrait.png"
           alt="Bo Hampton portrait"
-          width="540" loading="lazy"
+          loading="lazy"
         >
         <figcaption>Bo Hampton.</figcaption>
       </figure>
+      <figure>
+        <img
+          src="/images/bo-hampton-eber-wwii-return.png"
+          alt="Bo Hampton returning home from World War II with his son Eber, age 3"
+          loading="lazy"
+        >
+        <figcaption>Bo Hampton home from World War II with his son Eber, age 3.</figcaption>
+      </figure>
     </div>
-  </div>
+  </section>
 
   <!-- DR. EBER HAMPTON -->
   <section class="person-section" style="background: var(--white);">
@@ -602,17 +638,15 @@
   </section>
 
   <!-- BERKELEY GRADUATION PHOTO -->
-  <div style="background:var(--white); padding: 0 var(--gutter) clamp(64px,8vw,96px);">
-    <div class="photo-single reveal">
-      <figure>
-        <img
-          src="/images/adriel-sierra-hampton-berkeley-graduation-2014.png"
-          alt="Adriel and Sierra at her UC Berkeley graduation, May 2014"
-          width="540" loading="lazy"
-        >
-        <figcaption>Adriel and Sierra at her UC Berkeley graduation, May 2014.</figcaption>
-      </figure>
-    </div>
+  <div class="photo-single-section reveal" style="background:var(--white);">
+    <figure class="photo-single-fig">
+      <img
+        src="/images/adriel-sierra-hampton-berkeley-graduation-2014.png"
+        alt="Adriel and Sierra at her UC Berkeley graduation, May 2014"
+        loading="lazy"
+      >
+      <figcaption>Adriel and Sierra at her UC Berkeley graduation, May 2014.</figcaption>
+    </figure>
   </div>
 
   <!-- CLOSING -->
@@ -679,7 +713,7 @@
       <a href="/" class="footer-brand">AHG</a>
       <ul class="footer-links">
         <li><a href="/#services">Services</a></li>
-        <li><a href="/#about">About</a></li>
+        <li><a href="/about">About</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
